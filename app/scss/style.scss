@@ -1,6 +1,18 @@
-.testing {
-  width: percentage(5/7);
-}
 body {
-	
-}ad
+color:red;
+direction: none;
+}
+
+
+$typekit-green: #99cc00; 
+$typekit-link-color: $typekit-green;
+
+a {
+  color: $typekit-link-color;
+}
+.container{
+  	color: $typekit-green;
+  	background-color: $typekit-green;
+	bottom: 10px;
+	padding: 10px;
+}

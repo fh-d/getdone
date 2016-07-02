@@ -10,13 +10,16 @@ gulp.task('wiredep', function () {
     .pipe(gulp.dest('./'));
 });
 
-
 gulp.task('sass', function(){
   return gulp.src('app/scss/style.scss')
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('app/css/'))
 });
 
-gulp.task("default", ["sass"], function() {
-  gulp.watch("app/scss/style.scss", ["sass"])
-})
+ gulp.task('default', ['watch'], function() {
+   gulp.start('sass');
+ });
+
+ gulp.task('watch', function() {
+  gulp.watch('app/scss/*.scss', ['sass'])
+ });

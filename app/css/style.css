@@ -1,0 +1,12 @@
+body {
+  color: red;
+  direction: none; }
+
+a {
+  color: #99cc00; }
+
+.container {
+  color: #99cc00;
+  background-color: #99cc00;
+  bottom: 10px;
+  padding: 10px; }
