@@ -1,0 +1,23 @@
+{
+  "name": "daily-todo",
+  "version": "1.0.0",
+  "description": "Research project on localStorage - git init - sublim",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frankirito/daily-todo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frankirito/daily-todo/issues"
+  },
+  "homepage": "https://github.com/frankirito/daily-todo#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "wiredep": "^4.0.0",
+  }
+}
