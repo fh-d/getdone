@@ -12,16 +12,52 @@
     <!-- endbower -->
     <link rel="stylesheet" href="app/css/style.css" />
 
+  <style>
+ 
+  </style>
 
   </head>
   <body>
   <div class="container">
     <h1>Daily-Tasksffqer</h1>
+
+
+<ul id="sortable1" class="droptrue">
+  <li class="ui-state-default">Can be dropped..</li>
+  <li class="ui-state-default">..on an empty list</li>
+  <li class="ui-state-default">Item 3</li>
+  <li class="ui-state-default">Item 4</li>
+  <li class="ui-state-default">Item 5</li>
+</ul>
+ 
+<ul id="sortable2" class="dropfalse">
+  <li class="ui-state-highlight">Cannot be dropped..</li>
+  <li class="ui-state-highlight">..on an empty list</li>
+  <li class="ui-state-highlight">Item 3</li>
+  <li class="ui-state-highlight">Item 4</li>
+  <li class="ui-state-highlight">Item 5</li>
+</ul>
+ 
   </div>
 
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
     <!-- endbower -->
+  <script>
+  $(function() {
+    $( "ul.droptrue" ).sortable({
+      connectWith: "ul"
+    });
+ 
+    $( "ul.dropfalse" ).sortable({
+      connectWith: "ul",
+      dropOnEmpty: false
+    });
+ 
+    $( "#sortable1, #sortable2, #sortable3" ).disableSelection();
+  });
+  </script>
   </body>
 </html>
