@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/frankirito/daily-todo#readme",
   "devDependencies": {
+    "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",
-    "wiredep": "^4.0.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-watch": "^4.3.8",
+    "wiredep": "^4.0.0"
   }
 }
