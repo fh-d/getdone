@@ -1,2 +1,2 @@
 # daily-todo
-Research project on localStorage
+Research project on localStorage - git init
