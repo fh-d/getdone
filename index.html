@@ -22,31 +22,22 @@
 
                 <h1 class="text-center">Taskish</h1>
                 <h2 class="text-center">Let's organize your day!</h2>
-            <form name="toDoList">
-             <input value="Type what you need to get down today" onchange="sessionStorage.message=this.value" type="text" name="ListItem"/> 
-                 <div id="button">Add</div>
 
-            </form>
-    
+          <a href="#" id="clear">Clear all</a>
+
     
     <br/>
                   </div>
         </div>
-    <section class="app">
 
-        <ul id="sortable1" class="droptrue">
-                    <list>
-
-            <li class="ui-state-default">Call Mom</li>
-            <li class="ui-state-default">Run 5 KM</li>
-            <li class="ui-state-default">Reboot my C.V</li>
-            <li class="ui-state-default">Clean my room</li>
-
-            </list>
-
-        </ul>
-
-      </section>
+          <section id="taskIOSection">
+        <div id="formContainer">
+            <form id="taskEntryForm">
+                <input id="taskInput" placeholder="Start write all stuff you got to break down today" />
+            </form>
+        </div>
+        <ul id="taskList" class="droptrue"></ul>
+    </section>
     </div>
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -64,35 +55,41 @@
             dropOnEmpty: false
         });
 
-        $("#sortable1, #sortable2, #sortable3").disableSelection();
+        $("#taskList, #sortable2, #sortable3").disableSelection();
     });
     </script>
-    <script>
-      $(document).ready(
-    function(){
-        $('#button').click(
-            function(){
-                var toAdd = $('input[name=ListItem]').val();
-                 $('list').append('<li class="ui-state-default ui-sortable-handle">' + toAdd + '</li>');
-            });
+
+<script>
+  $(document).ready(function () {
+    var i = 0;
+    for (i = 0; i < localStorage.length; i++) {
+        var taskID = "task-" + i;
+        $('#taskList').append("<li id='" + taskID + "'>" + localStorage.getItem(taskID) + "</li>");
+    }
+    $('#clear').click(function () {
+        localStorage.clear();
+            location.reload();
+    });
+    $('#taskEntryForm').submit(function () {
+        if ($('#taskInput').val() !== "") {
+            var taskID = "task-" + i;
+            var taskMessage = $('#taskInput').val();
+            localStorage.setItem(taskID, taskMessage);
+            $('#taskList').append("<li class=' ui-state-default ui-sortable-handle' id='" + taskID + "'>" + taskMessage + "</li>");
+            var task = $('#' + taskID);
+            task.css('display', 'none');
+            task.slideDown();
+            $('#taskInput').val("");
+            i++;
+        }
+        return false;
+    });
 
 
       $(document).on('click','li', function(){
         $(this).toggleClass('done').show( "slow" );  
       });
-      
-      $('input').focus(function() {
-        $(this).val('');
-      });
-      
-      $('list').sortable();  
-      
-    }
-);
-
-    </script>
-<script>
-  
+});
 </script>
 </body>
 
