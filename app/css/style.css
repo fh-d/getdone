@@ -5,7 +5,7 @@ html {
   width: 100%; }
 
 body {
-  background: linear-gradient(#C5EDF9, #FFF);
+  background-image: url(fond.jpg);
   height: 100%;
   margin: 0;
   background-repeat: no-repeat;
@@ -19,21 +19,11 @@ a {
 
 .intro h1 {
   font-size: 5em;
-  text-transform: uppercase; }
-
-#sortable1, #sortable2, #sortable3 {
-  list-style-type: none;
-  margin: 20px;
-  float: left;
-  border-radius: 5px;
-  padding: 10px;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-content: center;
-  align-content: center; }
+  text-transform: uppercase;
+  font-family: "Inconsolata", Arial, sans-serif; }
 
 li {
-  background-color: #FFF;
+  background-color: rgba(255, 255, 255, 0.5);
   float: left;
   font-family: "Inconsolata", Arial, sans-serif;
   font-weight: bold;
@@ -60,7 +50,11 @@ li {
   box-shadow: inset 0 -4px 0 0px #5ABA7A;
   padding-right: 50px; }
 
-input {
+#taskList {
+  padding-top: 10%;
+  width: 90%; }
+
+#taskInput {
   font-family: "Inconsolata", Arial, sans-serif;
   border: 2px solid #1977cc;
   box-shadow: inset 0 -4px 0 0px #1977cc;
@@ -69,6 +63,6 @@ input {
   height: 50px;
   font-size: 20px;
   transition: all .15s ease-in-out; }
-  input :focus {
+  #taskInput :active {
     transition: all .15s ease-in-out;
     height: 80px; }
