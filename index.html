@@ -1,63 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Daily To-Do</title>
-
+    <title>Taskish 1.0</title>
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <!-- endbower -->
     <link rel="stylesheet" href="app/css/style.css" />
+    <style>
 
-  <style>
- 
-  </style>
+    </style>
+</head>
 
-  </head>
-  <body>
-  <div class="container">
-    <h1>Daily-Tasksffqer</h1>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 intro">
 
+                <h1 class="text-center">Taskish</h1>
+                <h2 class="text-center">Let's organize your day!</h2>
+            <form name="toDoList">
+             <input value="Type what you need to get down today" onchange="sessionStorage.message=this.value" type="text" name="ListItem"/> 
+                 <div id="button">Add</div>
 
-<ul id="sortable1" class="droptrue">
-  <li class="ui-state-default">Can be dropped..</li>
-  <li class="ui-state-default">..on an empty list</li>
-  <li class="ui-state-default">Item 3</li>
-  <li class="ui-state-default">Item 4</li>
-  <li class="ui-state-default">Item 5</li>
-</ul>
- 
-<ul id="sortable2" class="dropfalse">
-  <li class="ui-state-highlight">Cannot be dropped..</li>
-  <li class="ui-state-highlight">..on an empty list</li>
-  <li class="ui-state-highlight">Item 3</li>
-  <li class="ui-state-highlight">Item 4</li>
-  <li class="ui-state-highlight">Item 5</li>
-</ul>
- 
-  </div>
+            </form>
+    
+    
+    <br/>
+                  </div>
+        </div>
+    <section class="app">
 
+        <ul id="sortable1" class="droptrue">
+                    <list>
+
+            <li class="ui-state-default">Call Mom</li>
+            <li class="ui-state-default">Run 5 KM</li>
+            <li class="ui-state-default">Reboot my C.V</li>
+            <li class="ui-state-default">Clean my room</li>
+
+            </list>
+
+        </ul>
+
+      </section>
+    </div>
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/jquery-ui/jquery-ui.js"></script>
     <!-- endbower -->
-  <script>
-  $(function() {
-    $( "ul.droptrue" ).sortable({
-      connectWith: "ul"
+    <script>
+    $(function() {
+        $("ul.droptrue").sortable({
+            connectWith: "ul"
+        });
+
+        $("ul.dropfalse").sortable({
+            connectWith: "ul",
+            dropOnEmpty: false
+        });
+
+        $("#sortable1, #sortable2, #sortable3").disableSelection();
     });
- 
-    $( "ul.dropfalse" ).sortable({
-      connectWith: "ul",
-      dropOnEmpty: false
-    });
- 
-    $( "#sortable1, #sortable2, #sortable3" ).disableSelection();
-  });
-  </script>
-  </body>
+    </script>
+    <script>
+      $(document).ready(
+    function(){
+        $('#button').click(
+            function(){
+                var toAdd = $('input[name=ListItem]').val();
+                 $('list').append('<li class="ui-state-default ui-sortable-handle">' + toAdd + '</li>');
+            });
+
+
+      $(document).on('click','li', function(){
+        $(this).toggleClass('done').show( "slow" );  
+      });
+      
+      $('input').focus(function() {
+        $(this).val('');
+      });
+      
+      $('list').sortable();  
+      
+    }
+);
+
+    </script>
+<script>
+  
+</script>
+</body>
+
 </html>
