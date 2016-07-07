@@ -17,7 +17,7 @@
     <body>
         <div class="container intro">
             <div class="row">
-                <div class="col-md-6 center-block"><img src="logo.svg"></img></div>
+                <div class="col-md-6 center-block"><img src="logo.svg" alt="Get Done! icon"></img></div>
                 <div class="col-md-6">
                     <a href="#" id="clear">Clear addll</a>
                     <br/>
@@ -34,21 +34,36 @@
                 <ul id="taskList" class="droptrue"></ul>
             </div>
         </section>
+                   <!--  <div class="onBoarding-wrap">
+                <div class="onBoarding">
+                    <h3>Interactive Coloring Concept</h3>
+                    <p><img src="drag.svg" alt="drag icon"/>Drag any color from the left toolbar to an area or text in the mockup. A blue outline will indicate a droppable element.</p>
+                    <p><img src="time.svg" alt="drag icon"/>On mobile, wait a tiny bit until you drag the color drop.</p>
+                    <button class="onBoarding-close">Got it!</button>
+                </div>
+            </div>-->
+
     </div>
+
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/jquery-ui/jquery-ui.js"></script>
     <!-- endbower -->
+
+
+
+
     <script type="text/javascript">
     // Dynamic Background
     var totalCount = 10;
     function ChangeIt() {
     var num = Math.ceil(Math.random() * totalCount);
     // Path do app img background folder
-    document.body.background = 'bgimages/' + num + '.jpg';
+    document.body.background = 'app/img//bg/' + num + '.jpg';
     // Background repeat
-    document.body.style.backgroundRepeat = "repeat"; 
+    document.body.style.backgroundRepeat = "no-repeat"; 
+    document.body.style.backgroundSize = "cover"; 
     }
     ChangeIt();
     </script>
@@ -101,6 +116,7 @@
     $(this).toggleClass('done').show("slow");
     });
     });
+
     </script>
 </body>
 </html>
