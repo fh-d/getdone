@@ -19,11 +19,13 @@ gulp.task('sass', function(){
 });
 
  gulp.task('default', ['watch'], function() {
+   gulp.start('mini');
    gulp.start('sass');
  });
 
  gulp.task('watch', function() {
-  gulp.watch('app/scss/*.scss', ['sass'])
+  gulp.watch('app/scss/*.scss', ['sass']);
+  gulp.watch('app/css/*.css', ['mini'])
  });
 
 gulp.task('mini', function () {

@@ -15,6 +15,15 @@ body {
   font-family: "Karla", Arial, sans-serif;
   color: #1977cc; }
 
+.container-fluid {
+  margin-top: 15%;
+  width: 50vw;
+  min-width: 400px; }
+  @media screen and (max-width: 1200px) {
+    .container-fluid {
+      background-color: red;
+      margin-top: 25%; } }
+
 .center-block {
   /* Override bootstrap float properties for centered logo*/
   float: none !important;
@@ -22,10 +31,6 @@ body {
 
 a {
   color: #1977cc; }
-
-.intro {
-  position: relative;
-  top: 5vw; }
 
 .intro h1 {
   font-family: "Inconsolata", Arial, sans-serif;
@@ -52,7 +57,7 @@ li {
 .done {
   padding-right: 50px;
   background-color: #5ABA7A;
-  background-image: url("../img/done.png");
+  background-image: url(../img/done.png);
   background-position: calc(100% - 10%);
   background-repeat: no-repeat;
   color: #FFF;
