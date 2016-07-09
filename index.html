@@ -4,15 +4,15 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Get Done! - Let's Organize your day!</title>
+        <title>Get Done - Let's Organize your day!</title>
         <meta name="description" content="A fun interactive way to organize you day for changing colors on a mockup website" />
         <meta name="keywords" content="to-do, drag and drop, app, easy to use" />
-        <meta name="author" content="Codrops" />
+        <meta name="author" content="Frankirito" />
         <link rel="shortcut icon" href="app/img/favicon.png">
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
         <!-- endbower -->
-        <link rel="stylesheet" href="app/css/style.css" />
+        <link rel="stylesheet" href="app/css/style.min.css" />
     </head>
     <body>
         <div class="container intro">
@@ -29,10 +29,11 @@
                         <input id="taskInput" placeholder="Write stuff you got to break down today" />
                     </form>
                 </div>
-                <div class="draggable" class="ui-widget-content">
-                    <p>Drag me around</p>
+                <div class="ui-widget-content">
                 <ul id="taskList" class="droptrue"></ul>
+
             </div>
+  
         </section>
                    <!--  <div class="onBoarding-wrap">
                 <div class="onBoarding">
@@ -46,9 +47,9 @@
     </div>
 
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
     <!-- endbower -->
 
 
@@ -77,11 +78,9 @@
     connectWith: "ul",
     dropOnEmpty: false
     });
-    $("#taskList, #sortable2, #sortable3").disableSelection();
+    $("#sortable1, #sortable2, #sortable3").disableSelection();
     });
-    $(function() {
-    $(".draggable").draggable();
-    });
+
     </script>
     <script>
     // localStorage data task init

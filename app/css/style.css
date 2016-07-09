@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Karla");
 @import url("https://fonts.googleapis.com/css?family=Inconsolata");
-
 html {
   height: 100%;
   width: 100%; }
+
 body {
   overflow-x: hidden;
   /* Override bootstrap-body properties */
@@ -52,7 +52,7 @@ li {
 .done {
   padding-right: 50px;
   background-color: #5ABA7A;
-  background-image: url(../img/done.png);
+  background-image: url("../img/done.png");
   background-position: calc(100% - 10%);
   background-repeat: no-repeat;
   color: #FFF;

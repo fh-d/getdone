@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var wiredep = require('wiredep').stream;
 var sass = require('gulp-sass');
+var cssmin = require('gulp-cssmin');
+var rename = require('gulp-rename');
 
 gulp.task('wiredep', function () {
   gulp.src('*.html')
@@ -23,3 +25,10 @@ gulp.task('sass', function(){
  gulp.task('watch', function() {
   gulp.watch('app/scss/*.scss', ['sass'])
  });
+
+gulp.task('mini', function () {
+	gulp.src('app/css/style.css')
+		.pipe(cssmin())
+		.pipe(rename({suffix: '.min'}))
+		.pipe(gulp.dest('app/css'));
+});
