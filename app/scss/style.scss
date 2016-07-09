@@ -5,6 +5,11 @@ $app-color         : #1977cc;
 $app-green         : #5ABA7A;
 $app-nice-font     : "Inconsolata", Arial, sans-serif;
 
+@mixin center() {
+   float: none !important;
+   margin: 0 auto;
+}
+
 *{
 }
 
@@ -30,17 +35,27 @@ body {
 .container-fluid {
   margin-top: 15%;
   width: 50vw;
-  min-width: 100%; // Si la largeur de l’écran est inférieure 
+  min-width: 300px; // Si la largeur de l’écran est inférieure 
   //  à 940px, passer à une présentation fluide
   @media screen and (max-width:1200px) {
+    width: 60vw;
     background-color: red;
-    margin-top: 25%;
+    margin-top: calc(15% + 2vw);
+ }
+  @media screen and (max-width:992px) {
+    width: 70vw;
+    background-color: blue;
+    margin-top: calc(15% + 5vw);
+ }
+  @media screen and (max-width:768px) {
+    width: 80vw;
+    background-color: green;
+    margin-top: calc(20% + 5vw);
  }
 }
 .center-block {
   /* Override bootstrap float properties for centered logo*/
-  float   : none !important;
-  padding : 0;
+@include center;
 }
 
 a {

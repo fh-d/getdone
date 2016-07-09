@@ -18,16 +18,27 @@ body {
 .container-fluid {
   margin-top: 15%;
   width: 50vw;
-  min-width: 100%; }
+  min-width: 300px; }
   @media screen and (max-width: 1200px) {
     .container-fluid {
+      width: 60vw;
       background-color: red;
-      margin-top: 25%; } }
+      margin-top: calc(15% + 2vw); } }
+  @media screen and (max-width: 992px) {
+    .container-fluid {
+      width: 70vw;
+      background-color: blue;
+      margin-top: calc(15% + 5vw); } }
+  @media screen and (max-width: 768px) {
+    .container-fluid {
+      width: 80vw;
+      background-color: green;
+      margin-top: calc(20% + 5vw); } }
 
 .center-block {
   /* Override bootstrap float properties for centered logo*/
   float: none !important;
-  padding: 0; }
+  margin: 0 auto; }
 
 a {
   color: #1977cc; }
