@@ -30,7 +30,7 @@ body {
 .container-fluid {
   margin-top: 15%;
   width: 50vw;
-  min-width: 400px; // Si la largeur de l’écran est inférieure 
+  min-width: 100%; // Si la largeur de l’écran est inférieure 
   //  à 940px, passer à une présentation fluide
   @media screen and (max-width:1200px) {
     background-color: red;
