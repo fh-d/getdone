@@ -1,3 +1,8 @@
+    // onBoarding fade
+
+	$( ".info-close" ).click(function() {
+	  $( ".info-wrap" ).fadeOut( "slow" );
+	});
 
     // Dynamic Background
     var totalCount = 10;
@@ -5,9 +10,7 @@
     var num = Math.ceil(Math.random() * totalCount);
     // Path do app img background folder
     document.body.background = 'app/img//bg/' + num + '.jpg';
-    // Background repeat
-    document.body.style.backgroundRepeat = "no-repeat"; 
-    document.body.style.backgroundSize = "cover"; 
+
     }
     ChangeIt();
 

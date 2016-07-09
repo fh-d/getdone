@@ -1,5 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Karla");
 @import url("https://fonts.googleapis.com/css?family=Inconsolata");
+input:focus::-webkit-input-placeholder {
+  color: transparent; }
+
+input:focus:-moz-placeholder {
+  color: transparent; }
+
+/* FF 4-18 */
+input:focus::-moz-placeholder {
+  color: transparent; }
+
+/* FF 19+ */
+input:focus:-ms-input-placeholder {
+  color: transparent; }
+
+/* IE 10+ */
 html {
   height: 100%;
   width: 100%; }
@@ -13,27 +28,27 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Karla", Arial, sans-serif;
-  color: #1977cc; }
+  color: #410DDC; }
 
 .container-fluid {
-  margin-top: 15%;
   width: 50vw;
-  min-width: 300px; }
+  min-width: 300px;
+  margin-top: 15%; }
   @media screen and (max-width: 1200px) {
     .container-fluid {
       width: 60vw;
-      background-color: red;
-      margin-top: calc(15% + 2vw); } }
+      margin-top: calc(15% + 2vw);
+      background-color: red; } }
   @media screen and (max-width: 992px) {
     .container-fluid {
       width: 70vw;
-      background-color: blue;
-      margin-top: calc(15% + 5vw); } }
+      margin-top: calc(15% + 5vw);
+      background-color: blue; } }
   @media screen and (max-width: 768px) {
     .container-fluid {
       width: 80vw;
-      background-color: green;
-      margin-top: calc(20% + 5vw); } }
+      margin-top: calc(20% + 5vw);
+      background-color: green; } }
 
 .center-block {
   /* Override bootstrap float properties for centered logo*/
@@ -41,7 +56,7 @@ body {
   margin: 0 auto; }
 
 a {
-  color: #1977cc; }
+  color: #410DDC; }
 
 .intro h1 {
   font-family: "Inconsolata", Arial, sans-serif;
@@ -59,12 +74,15 @@ li {
   font-family: "Inconsolata", Arial, sans-serif;
   font-size: 1.1em;
   font-weight: bold;
-  color: #1977cc;
-  border: 2px solid #1977cc;
+  color: #410DDC;
+  border: 2px solid #410DDC;
   border-radius: 6px;
-  box-shadow: inset 0 -4px 0 0px #1977cc; }
+  box-shadow: inset 0 -4px 0 0px #9F8EEC; }
 
-/* To-Do finished style */
+.app {
+  padding-top: calc(20px + 2vw); }
+
+/* To-Do cliked done style */
 .done {
   padding-right: 50px;
   background-color: #5ABA7A;
@@ -81,60 +99,60 @@ li {
   padding-top: 10%; }
 
 #taskInput {
-  height: 50px;
+  height: 40px;
   width: 100%;
   font-family: "Inconsolata", Arial, sans-serif;
   font-size: 1.2em;
-  color: #1977cc;
-  border: 2px solid #1977cc;
-  box-shadow: inset 0 -4px 0 0px #1977cc;
+  color: #410DDC;
+  border: 2px solid #410DDC;
+  box-shadow: inset 0 -4px 0 0px #9F8EEC;
   transition: all .15s ease-in-out; }
-  #taskInput :active {
-    height: 2em;
+  #taskInput:focus {
+    height: 50px;
+    font-size: 3em;
+    font-weight: 900;
+    text-transform: uppercase;
     transition: all .15s ease-in-out; }
 
-.onBoarding {
+.eraser {
+  position: absolute;
+  top: 20px;
+  right: calc(10%);
+  height: calc(15px + 2vw);
+  width: calc(15px + 2vw); }
+
+.info-wrap {
   position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
   display: -webkit-flex;
   display: flex;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 100%;
+  width: 100%;
   -webkit-align-items: center;
   align-items: center;
   -webkit-justify-content: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 999999;
-  font-family: "Avenir", "Helvetica Neue", Arial, sans-serif; }
+  justify-content: center; }
 
-.onBoarding {
+.info {
   width: 90%;
   max-width: 500px;
-  background: #333;
   padding: 2.5em 2em;
-  font-size: 15px;
-  line-height: 1.5;
-  text-align: center;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); }
+  font-size: 10pt;
+  box-shadow: 0 12px 0 -6px rgba(0, 0, 0, 0.2);
+  background: #410DDC;
+  color: #FFF;
+  border-radius: 6px; }
 
-.onBoarding h3 {
-  margin: 0;
-  font-size: 1.5em; }
-
-.onBoarding img {
-  width: 52px;
-  height: 52px;
-  display: block;
-  margin: 0 auto 20px; }
-
-.onBoarding-close {
-  border: 3px solid #fff;
-  color: #fff;
-  background: none;
-  text-transform: uppercase;
-  font-weight: bold;
+.info-close {
+  margin: 1em 0 0 0;
   padding: 1em 2em;
+  background: none;
+  font-weight: bold;
+  color: #9F8EEC;
   letter-spacing: 1px;
-  margin: 1em 0 0 0; }
+  text-transform: uppercase;
+  border: 2px solid #9F8EEC;
+  box-shadow: inset 0 -4px 0 0px #9F8EEC; }
