@@ -1,3 +1,5 @@
+
+
     // onBoarding fade
 
 	$( ".info-close" ).click(function() {
@@ -32,7 +34,7 @@
     var taskID = "task-" + i;
     var taskMessage = $('#taskInput').val();
     localStorage.setItem(taskID, taskMessage);
-    $('#taskList').append("<li class='ui-state-default ui-sortable-handle' id='" + taskID + "'>" + taskMessage + "</li>");
+    $('#taskList').append("<li class='ui-state-default ui-sortable-handle droptrue' id='" + taskID + "'>" + taskMessage + "</li>");
     var task = $('#' + taskID);
     task.css('display', 'none');
     task.slideDown();
@@ -41,11 +43,14 @@
     }
     return false;
     });
+
+
     // Creation style
-    $(document).on('click', 'li', function() {
-    $(this).toggleClass('done').show("slow");
+
     });
-    });
+    // localStorage save done
+
+
     // jQueryUI draggable+sortable
     $(function() {
     $("ul.droptrue").sortable({
