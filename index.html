@@ -1,62 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Get Done - Let's Organize your day!</title>
-        <meta name="description" content="A fun interactive way to organize you day" />
-        <meta name="keywords" content="to-do, drag and drop, app, easy to use" />
-        <meta name="author" content="Frankirito" />
-        <link rel="shortcut icon" href="app/img/favicon.png">
-        <!-- bower:css -->
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
-        <!-- endbower -->
-        <!-- Over-ride bootsrap for GetDone APP -->
-        <link rel="stylesheet" href="app/css/style.min.css" />
-    </head>
-    <body>
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Get Done - Let's Organize your day!</title>
+    <meta name="description" content="A fun interactive way to organize you day" />
+    <meta name="keywords" content="to-do, drag and drop, app, easy to use" />
+    <meta name="author" content="Frankirito" />
+    <link rel="shortcut icon" href="app/img/favicon.png">
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- endbower -->
+    <!-- Over-ride bootsrap for GetDone APP -->
+    <link rel="stylesheet" href="app/css/style.min.css" />
+</head>
 
-        <div class="container-fluid">
-            <div class="eraser"> <img href="#" id="clear" src="app/img/reload.svg" class="img-responsive center-block" alt="Reload and clear all!"></img></div>
-
-            <div class="row">
-                <div class="col-lg-12">
+<body>
+    <div class="container-fluid">
+        <div class="eraser"> <img href="#" id="clear" src="app/img/reload.svg" class="img-responsive center-block" alt="Reload and clear all!"></img>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
                 <img src="app/img/logo.svg" class="img-responsive center-block" alt="App Logo"></img>
-                </div>
-
             </div>
-            <section id="taskIOSection" class="app">
-
-                    <form id="taskEntryForm">
-                        <input id="taskInput" placeholder="Write stuff you got to break down today" />
-                    </form>
-                <div class="ui-widget-content">
+        </div>
+        <section id="taskIOSection" class="app">
+            <form id="taskEntryForm">
+                <input id="taskInput" placeholder="Write stuff you got to break down today" />
+            </form>
+            <div class="ui-widget-content">
                 <ul id="taskList" class="droptrue"></ul>
             </div>
-  
         </section>
-            <div class="info-wrap">
-                <div class="info">
-                <img src="app/img/logo.svg" class="img-responsive center-block" alt="App Logo"></img>                  
-                 <ul class="topped">
-                 <h3>How to use Get Done?</h3>
-
-                 <li>Write your task</li>
-                 <li>Press enter to create it</li>
-                 <li>Arrange them all by dragging 'n dropin in the order you like</li>
-                 <li>When done, click once on your task to cross it out</li>
-                 <li>Click twice to delete it</li>
-                 <li>Reload on top to start a fresh new day!</li>
-
-                 </ul>
-                    <button class="info-close center-block topped">Got it!</button>
-                </div>
+        <div class="info-wrap">
+            <div class="info">
+                <img src="app/img/logo.svg" class="img-responsive center-block" alt="App Logo"></img>
+                <ul class="topped">
+                    <h3>How to use Get Done?</h3>
+                    <li>Write your task</li>
+                    <li>Press enter to create it</li>
+                    <li>Arrange them all by dragging 'n dropin in the order you like</li>
+                    <li>When done, click once on your task to cross it out</li>
+                    <li>Click twice to delete it</li>
+                    <li>Reload on top to start a fresh new day!</li>
+                </ul>
+                <button class="info-close center-block topped">Got it!</button>
             </div>
-
+        </div>
     </div>
-
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -64,8 +57,6 @@
     <!-- endbower -->
     <script src="main.js"></script>
     <script src="app.js"></script>
-
-
- 
 </body>
+
 </html>
