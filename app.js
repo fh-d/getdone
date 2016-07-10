@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-$(this).on('click', 'li', function(){
+$('#taskList').on('click', 'li', function(){
 
 ('taskID', $(this).addClass('strikeout done').show("slow"));
 });
