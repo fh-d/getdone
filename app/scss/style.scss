@@ -211,7 +211,7 @@ a {
   }
 }
 
-.strikeout{
+.strikeout::after{
   content       : "";
 
   position      : absolute;
