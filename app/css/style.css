@@ -2,7 +2,7 @@
 /* Google Fonts Import */
 @import url("https://fonts.googleapis.com/css?family=Karla");
 @import url("https://fonts.googleapis.com/css?family=Inconsolata");
-/* Google Fonts Import */
+/* SCSS VARIABLES */
 /* Placeholder style for all browser */
 input:focus::-webkit-input-placeholder {
   color: transparent; }
