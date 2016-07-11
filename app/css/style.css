@@ -124,6 +124,7 @@ a {
   right: calc(10%);
   height: calc(15px + 2vw);
   min-height: 30px;
+  max-height: 40px;
   width: calc(15px + 2vw); }
 
 /* On-Boarding and welcome style menu */
