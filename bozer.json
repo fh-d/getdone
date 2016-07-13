@@ -1,0 +1,30 @@
+{
+  "name": "daily-todo",
+  "description": "Research project on localStorage - git init - sublim",
+  "main": "index.js",
+  "authors": [
+    "frankirito <francoishenri.dupuich@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/frankirito/daily-todo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "bootstrap": "^3.3.6",
+    "jquery-ui": "^1.11.4",
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.min.js"
+      ]
+    }
+  }
+}

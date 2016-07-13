@@ -62,6 +62,3 @@
     });
     $("#sortable1, #sortable2, #sortable3").disableSelection();
     });
-
-
-

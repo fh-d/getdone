@@ -1,12 +1,12 @@
 {
   "name": "daily-todo",
   "description": "Research project on localStorage - git init - sublim",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "authors": [
     "frankirito <francoishenri.dupuich@gmail.com>"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/frankirito/daily-todo",
+  "homepage": "https://github.com/frankirito/getdone",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -15,9 +15,10 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^2.2.4",
     "bootstrap": "^3.3.6",
     "jquery-ui": "^1.11.4",
+    "angular": "^1.5.7",
+    "jquery": "^3.1.0"
   },
   "overrides": {
     "bootstrap": {
@@ -27,4 +28,5 @@
       ]
     }
   }
+
 }
